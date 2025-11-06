@@ -86,7 +86,7 @@ const BottomNavbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
-              href="/"
+              href={process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'}
               className="text-xl font-nav font-medium text-white dark:text-gray-900 hover:text-primary-400 transition-colors"
             >
               Yash Chudasama

@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigation = [
     { name: 'Work', href: '/work' },
     { name: 'Prototyping', href: '/prototyping' },
-    { name: 'Resume', href: 'https://yourusername.github.io/resume', external: true },
+    { name: 'Resume', href: 'https://yashcb.github.io/Resume', external: true },
   ];
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
-              href="/"
+              href={process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'}
               className="text-xl font-nav font-medium text-gray-900 dark:text-white hover:text-primary-400 transition-colors"
             >
               Yash Chudasama
